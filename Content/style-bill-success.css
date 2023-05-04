@@ -1,0 +1,83 @@
+﻿@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather/Merriweather-Bold.ttf') format('truetype');
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background: #385632;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top, rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg, #546956 0%, #385632 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg, #546956 0%,#385632 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg, #546956 0%,#385632 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg, #546956 0%,#385632 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom, rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg, #546956 0%,#385632 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+}
+
+.bill-success {
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -250px;
+    width: 500px;
+    padding-top: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 1.00);
+}
+
+    .bill-success img {
+        width: 100px;
+        margin: auto;
+        padding: 10px;
+        display: block;
+        border: 3px solid rgba(0, 128, 0, 0.52);
+        border-radius: 50%;
+    }
+
+    .bill-success h1 {
+        color: #595959;
+        letter-spacing: 1px;
+        text-align: center;
+        font-family: Merriweather;
+        margin: 20px 20px 10px 20px;
+    }
+
+    .bill-success span {
+        color: #595959;
+        display: block;
+    }
+
+    .bill-success .btn {
+        margin: 30px 40px 30px 40px;
+    }
+
+        .bill-success .btn a {
+            background-color: #3085d6;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 5px;
+            padding: 10px 30px 10px 30px;
+        }
+
+        .bill-success .btn a:hover {
+            background-color: #225a90;
+        }

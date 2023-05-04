@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>FreshFood Administrator</title>
+    <link href="../admin/images/logo/favicon.ico" rel="shortcut icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/mystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <section id="container">
+        <header class="header sticky-top">
+            <a href="../admin/index.html" class="logo"><b>Fresh<span>Food</span></b></a>
+            <div style="float:right;">
+                <a class="view" title="View" target="_blank" href="../index.html"><i class="fa fa-eye"></i> <span class="text">Xem trang chủ</span></a>
+                <a class="logout" title="Logout" href="../admin/login.html"><i class="fa fa-power-off" onclick="return confirm('Bạn muốn đăng xuất khỏi FreshFood Administrator?')"></i> <span class="text">Đăng xuất</span></a>
+            </div>
+
+        </header>
+
+        <div class="main-content">
+            <div class="wrapper d-flex align-items-stretch" style="margin-top:70px;">
+                <nav id="sidebar" class="active">
+                    <div class="custom-menu">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                            <i class="fa fa-bars"></i>
+                            <span class="sr-only">Toggle Menu</span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="info">
+                            <a href="../admin/info-admin.html"><img src="../admin/images/avt.jpg" /></a>
+                            <h5>
+                                Administrator
+                            </h5>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul class="list-unstyled components mb-5">
+                            <li>
+                                <a href="../admin/index.html"><span class="fa fa-home mr-3"></span>Trang Chủ</a>
+                            </li>
+                            <li>
+                                <a href="../admin/product-category.html"><span class="fa fa-list-alt mr-3"></span>Danh Mục</a>
+                            </li>
+                            <li>
+                                <a href="../admin/products.html"><span class="fa fa-product-hunt mr-3"></span>Sản Phẩm</a>
+                            </li>
+                            <li class="active">
+                                <a href="../admin/orders.html"><span class="fa fa-clipboard mr-3"></span>Đơn Hàng</a>
+                            </li>
+                            <li>
+                                <a href="../admin/users.html"><span class="fa fa-user mr-3"></span>Người Dùng</a>
+                            </li>
+                            <li>
+                                <a href="../admin/blogs.html"><span class="fa fa-sticky-note mr-3"></span>Bài Viết</a>
+                            </li>
+                            <li>
+                                <a href="../admin/comments.html"><span class="fa fa-comments-o mr-3"></span>Bình Luận</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Page Content  -->
+                <div id="content" class="p-4 p-md-5 pt-5">
+                    <div class="tittle-detail"><span>Quản Lý Đơn Hàng</span></div>
+
+                    <table class="table text-center table-striped">
+                        <thead class="bg-success text-white">
+                            <tr class="table-bordered">
+                                <th scope="col">ID</th>
+                                <th scope="col">Khách Hàng</th>
+                                <th scope="col">Thời Gian</th>
+                                <th scope="col">Tổng Tiền <small>(VNĐ)</small></th>
+                                <th scope="col">Thanh Toán</th>
+                                <th scope="col">Trạng Thái</th>
+                                <th scope="col">Chức Năng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="align-middle">1</th>
+                                <td class="align-middle">Cao Thiên Phương</td>
+                                <td class="align-middle">23/3/2020<br /> 17:29:52</td>
+                                <td class="align-middle text-right">10.280.000</td>
+
+                                <td class="align-middle">
+                                    Thẻ tín dụng
+                                </td>
+
+                                <td class="align-middle text-warning">
+                                    Chờ xác nhận
+                                    <!--<select id="selectbox">
+                        <option value="1" >Chờ xác nhận</option>
+                        <option value="2" selected>Đã xác nhận</option>
+                        <option value="3">Đã thanh toán</option>
+                        <option value="4">Đã hủy</option>
+                    </select>-->
+
+                                </td>
+                                <td class="align-middle">
+                                    <!--<button type="button"  class="btn btn-success btn-group-sm "><i class="fa fa-check"></i></button>-->
+                                    <a href="../admin/view-orders.html" title="Xem Chi Tiết" class="btn btn-secondary btn-group-sm "><i class="fa fa-eye"></i></a>
+                                    <a href="../admin/edit-orders.html" title="Chỉnh sửa" class="btn btn-info btn-group-sm "><i class="fa fa-pencil"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="align-middle">1</th>
+                                <td class="align-middle">Cao Thiên Phương</td>
+                                <td class="align-middle">23/3/2020<br /> 17:29:52</td>
+                                <td class="align-middle text-right">10.280.000</td>
+
+                                <td class="align-middle">
+                                    Thẻ tín dụng
+                                </td>
+
+                                <td class="align-middle text-primary">
+                                    Đã xác nhận
+                                    <!--<select id="selectbox">
+                        <option value="1" >Chờ xác nhận</option>
+                        <option value="2" selected>Đã xác nhận</option>
+                        <option value="3">Đã thanh toán</option>
+                        <option value="4">Đã hủy</option>
+                    </select>-->
+
+                                </td>
+                                <td class="align-middle">
+                                    <a href="../admin/view-product.html" title="Xem Chi Tiết" class="btn btn-secondary btn-group-sm "><i class="fa fa-eye"></i></a>
+                                    <a href="" title="Chỉnh sửa" class="btn btn-info btn-group-sm "><i class="fa fa-pencil"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="align-middle">1</th>
+                                <td class="align-middle">Cao Thiên Phương</td>
+                                <td class="align-middle">23/3/2020<br /> 17:29:52</td>
+                                <td class="align-middle text-right">10.280.000</td>
+
+                                <td class="align-middle">
+                                    Tiền mặt
+                                </td>
+
+                                <td class="align-middle text-success">
+                                    Đã thanh toán
+                                    <!--<select id="selectbox">
+                        <option value="1" selected>Chờ xác nhận</option>
+                        <option value="2">Đã xác nhận</option>
+                        <option value="3">Đã thanh toán</option>
+                        <option value="4">Đã hủy</option>
+                    </select>-->
+
+                                </td>
+                                <td class="align-middle">
+                                    <!--<button type="button"  class="btn btn-success btn-group-sm "><i class="fa fa-check"></i></button>-->
+                                    <a href="../admin/view-orders.html" title="Xem Chi Tiết" class="btn btn-secondary btn-group-sm "><i class="fa fa-eye"></i></a>
+                                    <a href="../admin/edit-orders.html" title="Chỉnh sửa" class="btn btn-info btn-group-sm "><i class="fa fa-pencil"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="align-middle">1</th>
+                                <td class="align-middle">Cao Thiên Phương</td>
+                                <td class="align-middle">23/3/2020<br /> 17:29:52</td>
+                                <td class="align-middle text-right">10.280.000</td>
+
+                                <td class="align-middle">
+                                    Tiền mặt
+                                </td>
+
+                                <td class="align-middle text-danger">
+                                    Đã hủy
+                                    <!--<select id="selectbox">
+                        <option value="1" selected>Chờ xác nhận</option>
+                        <option value="2">Đã xác nhận</option>
+                        <option value="3">Đã thanh toán</option>
+                        <option value="4">Đã hủy</option>
+                    </select>-->
+
+                                </td>
+                                <td class="align-middle">
+                                    <!--<button type="button"  class="btn btn-success btn-group-sm "><i class="fa fa-check"></i></button>-->
+                                    <a href="../admin/view-orders.html" title="Xem Chi Tiết" class="btn btn-secondary btn-group-sm "><i class="fa fa-eye"></i></a>
+                                    <a href="../admin/edit-orders.html" title="Chỉnh sửa" class="btn btn-info btn-group-sm "><i class="fa fa-pencil"></i></a>
+                                </td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script>.<br /> All Rights Reserved
+            </p>
+            <a id="button"></a>
+        </footer>
+    </section>
+    <div>
+        <script src="Scripts/popper.js"></script>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/script.js"></script>
+    </div>
+</body>
+</html>

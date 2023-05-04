@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>FreshFood Administrator</title>
+    <link href="../admin/images/logo/favicon.ico" rel="shortcut icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/mystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <section id="container">
+        <header class="header sticky-top">
+            <a href="../admin/index.html" class="logo"><b>Fresh<span>Food</span></b></a>
+            <div style="float:right;">
+                <a class="view" title="View" target="_blank" href="../index.html"><i class="fa fa-eye"></i> <span class="text">Xem trang chủ</span></a>
+                <a class="logout" title="Logout" href="../admin/login.html"><i class="fa fa-power-off" onclick="return confirm('Bạn muốn đăng xuất khỏi FreshFood Administrator?')"></i> <span class="text">Đăng xuất</span></a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="wrapper d-flex align-items-stretch" style="margin-top:70px;">
+                <nav id="sidebar" class="active">
+                    <div class="custom-menu">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                            <i class="fa fa-bars"></i>
+                            <span class="sr-only">Toggle Menu</span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="info">
+                            <a href="../admin/info-admin.html"><img src="../admin/images/avt.jpg" /></a>
+                            <h5>
+                                Administrator
+                            </h5>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul class="list-unstyled components mb-5">
+                            <li>
+                                <a href="../admin/index.html"><span class="fa fa-home mr-3"></span>Trang Chủ</a>
+                            </li>
+                            <li>
+                                <a href="../admin/product-category.html"><span class="fa fa-list-alt mr-3"></span>Danh Mục</a>
+                            </li>
+                            <li>
+                                <a href="../admin/products.html"><span class="fa fa-product-hunt mr-3"></span>Sản Phẩm</a>
+                            </li>
+                            <li>
+                                <a href="../admin/orders.html"><span class="fa fa-clipboard mr-3"></span>Đơn Hàng</a>
+                            </li>
+                            <li>
+                                <a href="../admin/users.html"><span class="fa fa-user mr-3"></span>Người Dùng</a>
+                            </li>
+                            <li class="active">
+                                <a href="../admin/blogs.html"><span class="fa fa-sticky-note mr-3"></span>Bài Viết</a>
+                            </li>
+                            <li>
+                                <a href="../admin/comments.html"><span class="fa fa-comments-o mr-3"></span>Bình Luận</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Page Content  -->
+                <div id="content" class="p-4 p-md-5 pt-5">
+                    <div>
+                        <a href="../admin/blogs.html" class="btn btn-outline-primary m-3">
+                            <i class="fa fa-arrow-circle-left"></i>&nbsp;Thoát
+                        </a>
+                    </div>
+                    <div class="detailed ">
+                        <h4>Chỉnh sửa bài viết</h4>
+                        <form class="" method="post">
+                            <div>
+                                <div class="form-group pb-3 pt-3">
+                                    <label class="control-label">Tiêu đề</label>
+                                    <input type="text" placeholder="" name="tieude" class="form-control" value="">
+                                    <small class="text-danger">Tiêu đề không được để trống</small>
+                                </div>
+
+                                <div class="form-group pb-3">
+                                    <label class="control-label d-block">Nội dung ngắn</label>
+                                    <textarea class="form-control " name="noidung" rows="4">  </textarea>
+                                    <small class="text-danger">Nội dung không được để trống</small>
+                                </div>
+
+                                <div class="form-group pb-3 pt-3">
+                                    <label class="control-label">Đường dẫn URL</label>
+                                    <input type="text" placeholder="" name="link" class="form-control" value="">
+                                    <small class="text-danger">Bắt buộc link URL bài đăng liên kết chi tiết</small>
+                                </div>
+
+                                <div class="form-group pb-3">
+                                    <label class="control-label d-block">Hình đại diện:</label>
+                                    <img src="../admin/images/avt.jpg" style="width:85px;height:85px;" class="border-secondary d-inline-block">
+                                    <input type="file" name="hdd" class="form-control-file d-inline-block" style="width: 350px;margin: auto 70px;">
+                                    <small class="text-danger">Hình đại diện không được để trống</small>
+                                </div>
+
+                                <div class="form-group pb-3">
+                                    <label class="control-label d-block">Tình trạng</label>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" name="status" id="customRadioInline1" class="custom-control-input" value="1" checked>
+                                        <label class="custom-control-label" for="customRadioInline1">Hiện</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" name="status" id="customRadioInline2" class="custom-control-input" value="0">
+                                        <label class="custom-control-label" for="customRadioInline2">Ẩn</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group border-top">
+                                    <input type="submit" class="btn btn-success d-block pull-right  mt-2" placeholder="" value="Lưu" name="OK">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script>.<br /> All Rights Reserved
+            </p>
+            <a id="button"></a>
+        </footer>
+    </section>
+
+    <div>
+        <script src="Scripts/popper.js"></script>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/script.js"></script>
+    </div>
+</body>
+</html>

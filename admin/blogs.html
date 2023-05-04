@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>FreshFood Administrator</title>
+    <link href="../admin/images/logo/favicon.ico" rel="shortcut icon" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/mystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <section id="container">
+        <header class="header sticky-top">
+            <a href="../admin/index.html" class="logo"><b>Fresh<span>Food</span></b></a>
+            <div style="float:right;">
+                <a class="view" title="View" target="_blank" href="../index.html"><i class="fa fa-eye"></i> <span class="text">Xem trang chủ</span></a>
+                <a class="logout" title="Logout" href="../admin/login.html"><i class="fa fa-power-off" onclick="return confirm('Bạn muốn đăng xuất khỏi FreshFood Administrator?')"></i> <span class="text">Đăng xuất</span></a>
+            </div>
+
+        </header>
+
+        <div class="main-content">
+            <div class="wrapper d-flex align-items-stretch" style="margin-top:70px;">
+                <nav id="sidebar" class="active">
+                    <div class="custom-menu">
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                            <i class="fa fa-bars"></i>
+                            <span class="sr-only">Toggle Menu</span>
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <div class="info">
+                            <a href="../admin/info-admin.html"><img src="../admin/images/avt.jpg" /></a>
+                            <h5>
+                                Administrator
+                            </h5>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul class="list-unstyled components mb-5">
+                            <li>
+                                <a href="../admin/index.html"><span class="fa fa-home mr-3"></span>Trang Chủ</a>
+                            </li>
+                            <li>
+                                <a href="../admin/product-category.html"><span class="fa fa-list-alt mr-3"></span>Danh Mục</a>
+                            </li>
+                            <li>
+                                <a href="../admin/products.html"><span class="fa fa-product-hunt mr-3"></span>Sản Phẩm</a>
+                            </li>
+                            <li>
+                                <a href="../admin/orders.html"><span class="fa fa-clipboard mr-3"></span>Đơn Hàng</a>
+                            </li>
+                            <li>
+                                <a href="../admin/users.html"><span class="fa fa-user mr-3"></span>Người Dùng</a>
+                            </li>
+                            <li class="active">
+                                <a href="../admin/blogs.html"><span class="fa fa-sticky-note mr-3"></span>Bài Viết</a>
+                            </li>
+                            <li>
+                                <a href="../admin/comments.html"><span class="fa fa-comments-o mr-3"></span>Bình Luận</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Page Content  -->
+                <div id="content" class="p-4 p-md-5 pt-5">
+                    <div class="tittle-detail"><span>Quản Lý Bài Viết</span></div>
+
+                    <a class="add" href="../admin/add-blogs.html">+ Thêm bài viết mới ...</a>
+
+                    <table class="table table-bordered text-center table-striped">
+                        <thead class="bg-success text-white">
+                            <tr>
+                                <th class="align-middle" scope="col">STT</th>
+                                <th class="align-middle" scope="col" width="620px">Tiêu Đề <br /> Nội Dung Tóm Tắt</th>
+                                <th class="align-middle" scope="col" width="84px">Hình Ảnh</th>
+                                <th class="align-middle" scope="col">Ngày Đăng</th>
+                                <th class="align-middle" scope="col">Tình Trạng</th>
+                                <th class="align-middle" scope="col">Chức Năng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="align-middle">1</th>
+                                <td class="align-middle text-left">
+                                    <strong>Mẹo trồng rau trong thùng xốp</strong><br />
+                                    Phương thức trồng rau trong thùng xốp ngày càng được ưa chuộng bởi sự đơn giản, tiện lợi,, dễ trồng và nhanh thu hoạch. Vậy làm thế nào để trồng rau trong hộp xốp thành công? ...
+                                </td>
+                                <td class="align-middle"> <img src="images/avt.jpg" class="border img-fluid" style="width:60px;height:60px;" /></td>
+
+                                <td class="align-middle">
+                                    25/03/2020 <br />06:34:15
+                                </td>
+                                <td class="align-middle">
+                                    Hiện
+                                </td>
+                                <td class="align-middle">
+                                    <!--<button type="button" class="btn btn-success btn-group-sm "><i class="fa fa-check"></i></button>-->
+                                    <a href="https://www.facebook.com/permalink.php?story_fbid=116127186688774&id=113487710286055&__tn__=K-R" target="_blank" title="Xem Chi Tiết" class="btn btn-secondary btn-group-sm "><i class="fa fa-eye"></i></a>
+                                    <a href="../admin/edit-blogs.html" title="Chỉnh sửa" class="btn btn-info btn-group-sm "><i class="fa fa-pencil"></i></a>
+                                    <button type="button" title="Xóa" class="btn btn-danger btn-group-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')"><i class="fa fa-trash-o "></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="align-middle">1</th>
+                                <td class="align-middle text-left">
+                                    <strong>Mẹo trồng rau trong thùng xốp</strong><br />
+                                    Phương thức trồng rau trong thùng xốp ngày càng được ưa chuộng bởi sự đơn giản, tiện lợi,, dễ trồng và nhanh thu hoạch. Vậy làm thế nào để trồng rau trong hộp xốp thành công? ...
+                                </td>
+                                <td class="align-middle"> <img src="images/avt.jpg" class="border img-fluid" style="width:60px;height:60px;" /></td>
+
+                                <td class="align-middle">
+                                    25/03/2020 <br />06:34:15
+                                </td>
+                                <td class="align-middle">
+                                    Hiện
+                                </td>
+                                <td class="align-middle">
+                                    <!--<button type="button" class="btn btn-success btn-group-sm "><i class="fa fa-check"></i></button>-->
+                                    <a href="https://www.facebook.com/permalink.php?story_fbid=116127186688774&id=113487710286055&__tn__=K-R" target="_blank" title="Xem Chi Tiết" class="btn btn-secondary btn-group-sm "><i class="fa fa-eye"></i></a>
+                                    <a href="../admin/edit-blogs.html" title="Chỉnh sửa" class="btn btn-info btn-group-sm "><i class="fa fa-pencil"></i></a>
+                                    <button type="button" title="Xóa" class="btn btn-danger btn-group-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?')"><i class="fa fa-trash-o "></i></button>
+                                </td>
+                            </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+
+                    <a class="add" href="../admin/add-blogs.html">+ Thêm bài viết mới ...</a>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script>.<br /> All Rights Reserved
+            </p>
+            <a id="button"></a>
+        </footer>
+    </section>
+
+    <div>
+        <script src="Scripts/popper.js"></script>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/script.js"></script>
+    </div>
+</body>
+</html>

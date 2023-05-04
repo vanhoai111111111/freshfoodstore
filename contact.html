@@ -1,0 +1,268 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>FreshFood Store | Thực phẩm sạch</title>
+    <link rel="shortcut icon" href="images/logo/favicon.ico" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="sticky-top">
+        <nav id="main-menu" class="navbar navbar-expand-lg navbar-light bg-lightk">
+            <div class="container">
+                <div class="pull-left">
+                    <a class="navbar-brand" href="index.php">
+                        <img src="images/logo/logo.png" />
+                    </a>
+                </div>
+                <div class="search">
+                    <form class="search-box top-search" method="get" action="search.php">
+                        <input class="form-control form-control-lg text-seach" type="text" placeholder="Tên sản phẩm bạn cần tìm..." name="search_query">
+                        <button class="btn" type="submit" name="submit_search" value="Tìm kiếm">
+                            <i class="fa fa-search" style="font-size: 22px"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto pull-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="menu-product">
+                                <a class="nav-link dropdown-toggle" href="#">
+                                    Sản phẩm
+                                </a>
+                                <ul class='level0'>
+                                    <li class="child">
+                                        <a href="list-product.php?idcha=<?php echo $data_dmcha[danhmuc_id];?>">
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                        <ul class='level1 hidden-xs'>
+                                            <li>
+                                                <a href="list-product.php?id=<?php echo $data_dmcon[danhmuc_id];?>">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.php">Bài viết</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.php">Liên hệ</a>
+                        </li>
+                        <li class="nav-item icon">
+                            <div class="menu-product">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-user-circle"></i>
+                                </a>
+                                <ul>
+                                    <?php
+                                    if ($_SESSION['login_user']) {
+                                    $taikhoan = $_SESSION['login_user']; ?>
+                                    <li>
+                                        <a class="w-75 namelogin" href="personal.php?user=<?php echo $taikhoan;?>"><?php echo "$taikhoan"; ?></a>
+                                    </li>
+                                    <li>
+                                        <a class="w-75" id="logOut" href="PHP/logout.php">Đăng xuất</a>
+                                    </li>
+                                    <?php } else { ?>
+                                    <li>
+                                        <a class="w-75" href="login.php">Đăng nhập</a>
+                                    </li>
+                                    <li>
+                                        <a class="w-75" href="login.php">Đăng ký</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item icon">
+                            <a class="nav-link" href="cart.php?user=<?php echo $taikhoan; ?>">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item icon">
+                            <a class="nav-link" href="cart.php">
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="margin-bottom: 0; background-color: #F8F6F3;">
+        <div class="contact">
+            <div class="contact-title">
+                <div class="container text-center">
+                    <h1>Liên Hệ </h1>
+                </div>
+            </div>
+            <div class="contact-body">
+                <div class="contact-box container text-center">
+                    <div class="leaf-free">
+                        <img width="150" src="images/hinh-anh-trang-chu/leaf-free-img.png" />
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="contact-item">
+                                <i class="fa fa-phone d-block"></i>
+                                <span class="d-block">0975103431</span>
+                                <span class="d-block">0975103431</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="contact-item">
+                                <i class="fa fa-envelope-o d-block"></i>
+                                <span class="d-block">truongquochung204@gmail.com</span>
+                                <span class="d-block">truongquochung204@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="contact-item">
+                                <i class="fa fa-map-marker d-block"></i>
+                                <span class="d-block">Số 06 Trần Văn Ơn, Phú Hoà, Thủ Dầu Một, Bình Dương</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-footer">
+                <div class="background-leaf"></div>
+                <div class="container">
+                    <h3>
+                        Câu Hỏi Thường Gặp!
+                    </h3>
+                    <img src="images/hinh-anh-trang-chu/logo-leaf.png" />
+                    <div class="question">
+                        <div class=" row">
+                            <div class="col-6">
+                                <div class="question-item" id="btn-toggle1">
+                                    <span class="pull-left">Cần mua sản phẩm nhưng hết hàng?</span>
+                                    <i class="arrow1 pull-right fa fa-caret-down"></i>
+                                    <div class="clearfix"></div>
+                                    <p class="p1 hide">
+                                        Liên hệ ngay đường dây nóng 0975103431 gặp anh H để được tư vấn tận tình hoặc để lại địa chỉ Email phía dưới để được cập nhật về thông tin sản phẩm sớm nhất. Xin cảm ơn!
+                                    </p>
+                                </div>
+                                <div class="question-item" id="btn-toggle3">
+                                    <span class="pull-left">Hàng được đặt khi nào tới tay khách?</span>
+                                    <i class="arrow3 pull-right fa fa-caret-down"></i>
+                                    <div class="clearfix"></div>
+                                    <p class="p3 hide">
+                                        Tùy thuộc vào thời gian quý khách đặt hàng và bên giao hàng nhận hàng từ Shop, thường là 3 tới 5 ngày kể từ lúc đơn hàng được xác nhận. Xin cảm ơn!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="question-item" id="btn-toggle2">
+                                    <span class="pull-left">Không đăng ký có mua hàng được không?</span>
+                                    <i class="arrow2 pull-right fa fa-caret-down"></i>
+                                    <div class="clearfix"></div>
+                                    <p class="p2 hide">
+                                        Quý khách có thể click vào <a href="login.php">đây</a> để đăng ký và được giảm 25% cho lần mua hàng đầu tiên, khách hàng cần đăng ký để chúng tôi có thể xác minh thông tin cá nhân và địa chỉ để có thể giao sản phẩm đến tay quý khách. Xin cảm ơn!
+                                    </p>
+                                </div>
+                                <div class="question-item" id="btn-toggle4">
+                                    <span class="pull-left">Trở thành nhà cung cấp độc quyền cho Shop</span>
+                                    <i class="arrow4 pull-right fa fa-caret-down"></i>
+                                    <div class="clearfix"></div>
+                                    <p class="p4 hide">
+                                        Nếu bạn có nguồn sản phẩm dồi dào? Nông sản của bạn đạt chất lượng quốc tế? Bạn muốn hợp tác để trở thành nhà cung cấp độc quyền cho <font color="#55A646">FreshFood Store</font> hãy liên hệ ngay với chúng tôi bằng hotline hoặc gửi mail cho chúng tôi để được tư vấn tận tình. Xin cảm ơn!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="margin-top: 0">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h3>
+                        Thông tin liên hệ
+                    </h3>
+                    <div class="address">
+                        Địa chỉ: Lầu 8, 79 Trương Định, Quận 1, Hồ Chí Minh, Việt Nam<br>
+                        Điện thoại: 0964657071<br>
+                        Hotline: 0964657071<br>
+                        Email: <a href="#">mapkhung389@gmail.com</a><br>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <h3>Về chúng tôi</h3>
+                    <p>Hiệp Thực Phẩm Minh Bạch (FTA) được thành lập tại Việt Nam vào năm 2016, với mục tiêu cụ thể là phát triển và thúc đẩy các tiêu chuẩn minh bạch và an toàn thực phẩm từ trang trại đến bàn ăn.</p>
+                    <div class="pre-footer-subscribe-box pre-footer-subscribe-box-vertical">
+                        <h3>Nhận bản tin</h3>
+                        <p>Hãy để lại Email của bạn để nhận được những thông tin mới nhất được cập nhật liên tục !</p>
+                        <div class="input-group">
+                            <input type="text" id="txtSubscribe" class="form-control" placeholder="youremail@mail.com">
+                            <span class="input-group-btn">
+                                <button id="btnSubscribe" class="btn btn-info">Subscribe</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/FreshFood-Store-Th%E1%BB%B1c-Ph%E1%BA%A9m-S%E1%BA%A1ch-Cho-M%E1%BB%8Di-Nh%C3%A0-113487710286055/"
+                         data-small-header="false"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false"
+                         data-show-facepile="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        2020 © Association of Food Transparency. ALL Rights Reserved.
+                        <a href="#">Chính Sách Bảo Mật</a> |
+                        <a href="#">Điều Khoản Dịch Vụ</a>
+                    </div>
+                    <div class="col-4">
+                        <div class="pull-right">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-google"></i>
+                            <i class="fa fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="javascript:void(0);" class="back-to-top" style="display: block;"><span>Top</span></a>
+    <div id="script">
+        <script src="Scripts/popper.js"></script>
+        <script src="Scripts/jquery-3.0.0.js"></script>
+        <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/script.js"></script>
+    </div>
+</body>
+</html>
