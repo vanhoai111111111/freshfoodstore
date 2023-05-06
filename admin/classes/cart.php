@@ -103,7 +103,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/freshfoodstore/helper/format.php';
             $result = $this->db->select($query);
             return $result;
         }
-        public function insertOrder($customer_id)
+       /* public function insertOrder1($customer_id)
         {
             $sId = session_id();
             $query = "SELECT * FROM tbl_cart WHERE sId= '$sId'";
@@ -125,7 +125,39 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/freshfoodstore/helper/format.php';
                     $insert_order = $this->db->insert($query_order1);
                 }
             }
+        } */
+         public function insertOrder($customer_id)
+        {
+    $sId = session_id();
+    $query = "SELECT * FROM tbl_cart WHERE sId= '$sId'";
+    $get_product = $this->db->select($query);
+    if($get_product){
+        while($result = $get_product->fetch_assoc()){
+            $productid = $result['productId'];
+            $productName = $result['productName'];
+            $quantity = $result['quantity'];
+            $price = $result['price'];
+            $image = $result['image'];
+            $customer_id = $customer_id;
+
+            $query_order = "INSERT INTO tbl_order(productId,productName,quantity,price,image,customer_id) values('$productid','$productName','$quantity','$price','$image','$customer_id')";                    
+            $insert_order = $this->db->insert($query_order);
+            $query_select_product = "SELECT * FROM tbl_product WHERE productId='$productid'";
+            $product = $this->db->select($query_select_product)->fetch_assoc();
+            if ($product) {
+                $remaining_quantity = $product['soluong'] - $quantity;
+                if ($remaining_quantity < 0) {
+                    // Trường hợp số lượng tồn kho không đủ để thực hiện đơn hàng
+                    // Xử lý theo yêu cầu, ví dụ:
+                    echo "Số lượng sản phẩm '$productName' không đủ để thực hiện đơn hàng.";
+                } else {
+                    $query_update_product = "UPDATE tbl_product SET soluong = '$remaining_quantity' WHERE productId='$productid'";
+                    $update_product = $this->db->update($query_update_product);
+                }
+            } 
         }
+    }
+}
         public function get_inbox_cart()
         {
             $query = "SELECT * FROM tbl_order order by date_order";

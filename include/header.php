@@ -53,7 +53,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="news.html">Bài viết</a>
+                        <a class="nav-link" href="news.php">Bài viết</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Liên hệ</a>

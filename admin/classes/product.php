@@ -172,8 +172,9 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/freshfoodstore/helper/format.php';
         return $result;
     }
     public function get_details($id){
-        $query = "SELECT tbl_product.*,tbl_category.catName,tbl_brand.brandName
+        $query = "SELECT tbl_product.*,tbl_category.catName,tbl_brand.brandName, count(tbl_order.quantity) as ban
         FROM tbl_product INNER JOIN tbl_category ON tbl_product.catId = tbl_category.catId
+                            INNER JOIN tbl_order ON tbl_product.productId = tbl_order.productId
                         INNER JOIN tbl_brand ON tbl_product.brandId = tbl_brand.brandId
         WHERE tbl_product.productId = '$id'
         ";

@@ -72,10 +72,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addProduct'])) {
                             <label class="mini-tittle">Số lượng: </label>
                             <input type="number" name="quantity" value="1" min="1" max="100" />
                             <span class="view-box">
-                                113 sản phẩm có sẵn
+                            <?php echo $result_details['soluong']?> Sản Phẩm
                             </span>
                             <span class="view-box">
-                                2 sản phẩm đã bán
+                           Đã Bán  <?php echo $result_details['ban']?> Sản Phẩm
                             </span>
                         </div>
                         <div class="button">
@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['addProduct'])) {
                                         <span class="text-muted pull-right">
                                             <small class="text-muted">27/3/2020</small>
                                         </span>
-                                        <strong>Quốc Hưng</strong>
+                                        <strong>Văn Hoài</strong>
                                         <p>
                                             Sản phẩm chất lượng tốt, đóng gói đẹp chắc chắn
                                         </p>

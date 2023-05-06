@@ -13,7 +13,7 @@
         <nav id="main-menu" class="navbar navbar-expand-lg navbar-light bg-lightk">
             <div class="container">
                 <div class="pull-left">
-                    <a class="navbar-brand" href="/index.html">
+                    <a class="navbar-brand" href="index.php">
                         <img src="images/logo/logo.png" />
                     </a>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse pull-right" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto pull-right">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Trang chủ</a>
+                            <a class="nav-link" href="index.php">Trang chủ</a>
                         </li>
                         <li class="nav-item dropdown">
                             <div class="menu-product">
@@ -37,9 +37,9 @@
                                 </a>
                                 <ul class='level0'>
                                     <li class="child">
-                                        <a href="list-product.html">Rau củ quả<i class="fa fa-angle-right"></i></a>
+                                        <a href="list-product.php">Rau củ quả<i class="fa fa-angle-right"></i></a>
                                         <ul class='level1 hidden-xs'>
-                                            <li><a href="list-product.html">Trái cây tươi</a></li>
+                                            <li><a href="list-product.php">Trái cây tươi</a></li>
                                             <li><a href="#">Trái cây sấy</a></li>
                                             <li><a href="#">Rau xanh</a></li>
                                         </ul>
@@ -66,10 +66,10 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="news.html">Bài viết</a>
+                            <a class="nav-link" href="news.php">Bài viết</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Liên hệ</a>
+                            <a class="nav-link" href="contact.php">Liên hệ</a>
                         </li>
                         <li class="nav-item icon">
                             <div class="menu-product">
@@ -78,16 +78,16 @@
                                 </a>
                                 <ul>
                                     <li>
-                                        <a class="w-75" href="login.html">Đăng nhập</a>
+                                        <a class="w-75" href="login.php">Đăng nhập</a>
                                     </li>
                                     <li>
-                                        <a class="w-75" href="login.html">Đăng ký</a>
+                                        <a class="w-75" href="login.php">Đăng ký</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
                         <li class="nav-item icon">
-                            <a class="nav-link" href="cart.html">
+                            <a class="nav-link" href="cart.php">
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
                         </li>
@@ -101,7 +101,7 @@
         <div class="list-news container">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Bài viết</li>
                 </ol>
             </nav>
