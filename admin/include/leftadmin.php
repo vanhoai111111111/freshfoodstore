@@ -30,31 +30,12 @@
                                 <a href="../admin/product.php"><i class="menu-icon fa fa-product-hunt mr-3"
                                         title="Sản Phẩm"></i>Sản Phẩm</a>
                             </li>
-
-                            <h3 class="menu-title">Bài Viết</h3>
-                            <li>
-                                <a href="../admin/article-category.aspx"><i class="menu-icon fa fa-list-ul mr-3"
-                                        title="Thể Loại Bài Viết"></i>Thể Loại Bài Viết</a>
-                            </li>
-                            <li>
-                                <a href="../admin/article-list.aspx"><i class="menu-icon fa fa-sticky-note mr-3"
-                                        title="Bài Viết"></i>Bài Viết</a>
-                            </li>
-
                             <h3 class="menu-title">Quản Lý</h3>
                             <li>
                                 <a href="../admin/orderadmin.php"><i class="menu-icon fa fa-clipboard mr-3"
                                         title="Đơn Hàng"></i>Đơn Hàng</a>
                             </li>
-                            <li>
-                                <a href="../admin/reviews.aspx"><i class="menu-icon fa fa-comments-o mr-3"
-                                        title="Đánh Giá"></i>Đánh Giá</a>
-                            </li>
-                            <h3 class="menu-title">Thiết Kế</h3>
-                            <li>
-                                <a href="../admin/banners.aspx"><span class="menu-icon fa fa-picture-o mr-3"
-                                        title="Banner"></span>Banner</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </nav>

@@ -12,6 +12,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/freshfoodstore/helper/format.php';
         $this->db = new Database();
         $this->fm = new Format();
     }
+    
     public function add_mua($quantity,$id){
 
         $quantity = $this->fm->validation($quantity);
@@ -55,6 +56,11 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/freshfoodstore/helper/format.php';
         public function get_product_cart(){
             $sId = session_id();
             $query = "SELECT * FROM tbl_cart WHERE sId='$sId'";
+            $result = $this->db->select($query);
+            return $result;
+        }
+        public function get_chuagiao(){
+            $query = "SELECT count(*) AS chuagiao FROM tbl_order WHERE status = 0 group by status ";
             $result = $this->db->select($query);
             return $result;
         }
